@@ -17,7 +17,7 @@ export class EC2QueueProcessor extends Construct {
   public readonly queue: sqs.Queue;
   public readonly autoScalingGroup: autoscaling.AutoScalingGroup;
 
-  constructor(scope: Construct, id: string, props: EC2QueueProcessorProps) {
+  constructor(scope: Construct, id: string, props: EC2QueueProcessorProps, debug: boolean = false) {
     super(scope, id);
 
     // Create SQS Queue
@@ -77,7 +77,7 @@ export class EC2QueueProcessor extends Construct {
       role,
       keyName: props.keyName,
       userData,
-      associatePublicIpAddress: true,
+      associatePublicIpAddress: debug,
     });
 
     this.autoScalingGroup.scaleOnMetric('ScaleOnSQSMessages', {

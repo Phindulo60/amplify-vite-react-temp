@@ -47,7 +47,7 @@ type AutoProcessorProps={
 export class AutoProcessor extends Construct {
   queue: sqs.Queue;
   asg: autoscaling.AutoScalingGroup;
-  constructor(scope: Construct, id: string, props: AutoProcessorProps) {
+  constructor(scope: Construct, id: string, props: AutoProcessorProps, debug: boolean = false) {
     super(scope, id);
 
     const { vpc, ecsImage,instanceType,ecsTaskRole,memoryLimitMiB,gpuCount,machineImage } = props;
@@ -61,7 +61,9 @@ export class AutoProcessor extends Construct {
     });
 
     const sg = new ec2.SecurityGroup(this, "instanceSg", { vpc });
-    sg.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(22));
+    if (debug) {
+      sg.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(22));
+    }
     // Create Auto Scaling Group
     this.asg = new autoscaling.AutoScalingGroup(this, 'ProcessorASG', {
       vpc,
@@ -75,7 +77,7 @@ export class AutoProcessor extends Construct {
       maxCapacity: 1,
       desiredCapacity: 0,
       keyName: "cvat_africa",
-      associatePublicIpAddress: true, // Ensure instances get a public IP
+      associatePublicIpAddress: debug
     });
 
 

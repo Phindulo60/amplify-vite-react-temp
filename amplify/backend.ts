@@ -104,13 +104,12 @@ const ecsTaskRole = new iam.Role(ecsStack, "EcsTaskRole", {
 });
 
 const vpc = new ec2.Vpc(customStack, "my-cdk-vpc");
-const ecsvpc = new ec2.Vpc(ecsStack, "my-cdk-vpc");
 ecsTaskRole.addManagedPolicy(
   iam.ManagedPolicy.fromAwsManagedPolicyName("AWSAppSyncInvokeFullAccess"),
 );
 const pointFinderAutoProcessor = new AutoProcessor(ecsStack, "CpuAutoProcessor",
   {
-    vpc: ecsvpc,
+    vpc: vpc,
     instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3, ec2.InstanceSize.SMALL),
     ecsImage: ecs.ContainerImage.fromAsset("containerImages/pointFinderImage"),
     ecsTaskRole,
