@@ -76,7 +76,7 @@ export class AutoProcessor extends Construct {
       securityGroup: sg,
       maxCapacity: 1,
       desiredCapacity: 0,
-      keyName: "cvat_africa",
+      keyName: "phindulo",
       associatePublicIpAddress: debug
     });
 
@@ -181,7 +181,7 @@ export class AutoProcessorEC2 extends Construct {
       desiredCapacity: 0,
       securityGroup,
       role,
-      keyName: "cvat_africa",
+      keyName: "phindulo",
       userData: createUserData(inputqueue,outputqueue),
     });
 

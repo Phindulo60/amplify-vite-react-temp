@@ -37,7 +37,7 @@ const getEnvironmentContext = (app: cdk.App) => {
 export const initStack = () => {
   const app = new cdk.App();
   const context = getEnvironmentContext(app) as CDKContext;
-  const stackName = `${context.appName || 'defaultAppName'}-custom-stack-${context.environment || 'defaultEnv'}`;
+  const stackName = process.env.STACK_NAME || app.node.tryGetContext('stackName') || 'default-stack-name';;
 
   // tag resources in AWS to find the easier
   const tags = {

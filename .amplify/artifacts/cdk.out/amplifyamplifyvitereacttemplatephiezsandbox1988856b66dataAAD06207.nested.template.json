@@ -67,7 +67,7 @@
       "ApiId"
      ]
     },
-    "Expires": 1731056735
+    "Expires": 1731070264
    },
    "Metadata": {
     "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/data/amplifyData/GraphQLAPI/DefaultApiKey"
