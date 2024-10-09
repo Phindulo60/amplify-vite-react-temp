@@ -747,7 +747,7 @@
   "MyProcessorProcessorASGLaunchConfigE815D946": {
    "Type": "AWS::AutoScaling::LaunchConfiguration",
    "Properties": {
-    "AssociatePublicIpAddress": true,
+    "AssociatePublicIpAddress": false,
     "IamInstanceProfile": {
      "Ref": "MyProcessorProcessorASGInstanceProfileD0978629"
     },

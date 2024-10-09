@@ -105,578 +105,6 @@
     "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/EcsTaskRole/DefaultPolicy/Resource"
    }
   },
-  "mycdkvpc037DA4AF": {
-   "Type": "AWS::EC2::VPC",
-   "Properties": {
-    "CidrBlock": "10.0.0.0/16",
-    "EnableDnsHostnames": true,
-    "EnableDnsSupport": true,
-    "InstanceTenancy": "default",
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc"
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/Resource"
-   }
-  },
-  "mycdkvpcPublicSubnet1Subnet0CCFA225": {
-   "Type": "AWS::EC2::Subnet",
-   "Properties": {
-    "AvailabilityZone": {
-     "Fn::Select": [
-      0,
-      {
-       "Fn::GetAZs": ""
-      }
-     ]
-    },
-    "CidrBlock": "10.0.0.0/18",
-    "MapPublicIpOnLaunch": true,
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "aws-cdk:subnet-name",
-      "Value": "Public"
-     },
-     {
-      "Key": "aws-cdk:subnet-type",
-      "Value": "Public"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1"
-     }
-    ],
-    "VpcId": {
-     "Ref": "mycdkvpc037DA4AF"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/Subnet"
-   }
-  },
-  "mycdkvpcPublicSubnet1RouteTableC2716F4D": {
-   "Type": "AWS::EC2::RouteTable",
-   "Properties": {
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1"
-     }
-    ],
-    "VpcId": {
-     "Ref": "mycdkvpc037DA4AF"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/RouteTable"
-   }
-  },
-  "mycdkvpcPublicSubnet1RouteTableAssociation2B06D461": {
-   "Type": "AWS::EC2::SubnetRouteTableAssociation",
-   "Properties": {
-    "RouteTableId": {
-     "Ref": "mycdkvpcPublicSubnet1RouteTableC2716F4D"
-    },
-    "SubnetId": {
-     "Ref": "mycdkvpcPublicSubnet1Subnet0CCFA225"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/RouteTableAssociation"
-   }
-  },
-  "mycdkvpcPublicSubnet1DefaultRoute19FD7680": {
-   "Type": "AWS::EC2::Route",
-   "Properties": {
-    "DestinationCidrBlock": "0.0.0.0/0",
-    "GatewayId": {
-     "Ref": "mycdkvpcIGW4220D5A9"
-    },
-    "RouteTableId": {
-     "Ref": "mycdkvpcPublicSubnet1RouteTableC2716F4D"
-    }
-   },
-   "DependsOn": [
-    "mycdkvpcVPCGW2444B783"
-   ],
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/DefaultRoute"
-   }
-  },
-  "mycdkvpcPublicSubnet1EIPC0CEF1CB": {
-   "Type": "AWS::EC2::EIP",
-   "Properties": {
-    "Domain": "vpc",
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1"
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/EIP"
-   }
-  },
-  "mycdkvpcPublicSubnet1NATGateway3DF5C4E4": {
-   "Type": "AWS::EC2::NatGateway",
-   "Properties": {
-    "AllocationId": {
-     "Fn::GetAtt": [
-      "mycdkvpcPublicSubnet1EIPC0CEF1CB",
-      "AllocationId"
-     ]
-    },
-    "SubnetId": {
-     "Ref": "mycdkvpcPublicSubnet1Subnet0CCFA225"
-    },
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1"
-     }
-    ]
-   },
-   "DependsOn": [
-    "mycdkvpcPublicSubnet1DefaultRoute19FD7680",
-    "mycdkvpcPublicSubnet1RouteTableAssociation2B06D461"
-   ],
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/NATGateway"
-   }
-  },
-  "mycdkvpcPublicSubnet2Subnet33F973F6": {
-   "Type": "AWS::EC2::Subnet",
-   "Properties": {
-    "AvailabilityZone": {
-     "Fn::Select": [
-      1,
-      {
-       "Fn::GetAZs": ""
-      }
-     ]
-    },
-    "CidrBlock": "10.0.64.0/18",
-    "MapPublicIpOnLaunch": true,
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "aws-cdk:subnet-name",
-      "Value": "Public"
-     },
-     {
-      "Key": "aws-cdk:subnet-type",
-      "Value": "Public"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2"
-     }
-    ],
-    "VpcId": {
-     "Ref": "mycdkvpc037DA4AF"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/Subnet"
-   }
-  },
-  "mycdkvpcPublicSubnet2RouteTableB1A27A7D": {
-   "Type": "AWS::EC2::RouteTable",
-   "Properties": {
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2"
-     }
-    ],
-    "VpcId": {
-     "Ref": "mycdkvpc037DA4AF"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/RouteTable"
-   }
-  },
-  "mycdkvpcPublicSubnet2RouteTableAssociation3ADB11EB": {
-   "Type": "AWS::EC2::SubnetRouteTableAssociation",
-   "Properties": {
-    "RouteTableId": {
-     "Ref": "mycdkvpcPublicSubnet2RouteTableB1A27A7D"
-    },
-    "SubnetId": {
-     "Ref": "mycdkvpcPublicSubnet2Subnet33F973F6"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/RouteTableAssociation"
-   }
-  },
-  "mycdkvpcPublicSubnet2DefaultRoute32FE0E26": {
-   "Type": "AWS::EC2::Route",
-   "Properties": {
-    "DestinationCidrBlock": "0.0.0.0/0",
-    "GatewayId": {
-     "Ref": "mycdkvpcIGW4220D5A9"
-    },
-    "RouteTableId": {
-     "Ref": "mycdkvpcPublicSubnet2RouteTableB1A27A7D"
-    }
-   },
-   "DependsOn": [
-    "mycdkvpcVPCGW2444B783"
-   ],
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/DefaultRoute"
-   }
-  },
-  "mycdkvpcPublicSubnet2EIP2135E277": {
-   "Type": "AWS::EC2::EIP",
-   "Properties": {
-    "Domain": "vpc",
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2"
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/EIP"
-   }
-  },
-  "mycdkvpcPublicSubnet2NATGatewayE67C5CFB": {
-   "Type": "AWS::EC2::NatGateway",
-   "Properties": {
-    "AllocationId": {
-     "Fn::GetAtt": [
-      "mycdkvpcPublicSubnet2EIP2135E277",
-      "AllocationId"
-     ]
-    },
-    "SubnetId": {
-     "Ref": "mycdkvpcPublicSubnet2Subnet33F973F6"
-    },
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2"
-     }
-    ]
-   },
-   "DependsOn": [
-    "mycdkvpcPublicSubnet2DefaultRoute32FE0E26",
-    "mycdkvpcPublicSubnet2RouteTableAssociation3ADB11EB"
-   ],
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/NATGateway"
-   }
-  },
-  "mycdkvpcPrivateSubnet1Subnet196BF1EF": {
-   "Type": "AWS::EC2::Subnet",
-   "Properties": {
-    "AvailabilityZone": {
-     "Fn::Select": [
-      0,
-      {
-       "Fn::GetAZs": ""
-      }
-     ]
-    },
-    "CidrBlock": "10.0.128.0/18",
-    "MapPublicIpOnLaunch": false,
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "aws-cdk:subnet-name",
-      "Value": "Private"
-     },
-     {
-      "Key": "aws-cdk:subnet-type",
-      "Value": "Private"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet1"
-     }
-    ],
-    "VpcId": {
-     "Ref": "mycdkvpc037DA4AF"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet1/Subnet"
-   }
-  },
-  "mycdkvpcPrivateSubnet1RouteTableD4BD6179": {
-   "Type": "AWS::EC2::RouteTable",
-   "Properties": {
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet1"
-     }
-    ],
-    "VpcId": {
-     "Ref": "mycdkvpc037DA4AF"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet1/RouteTable"
-   }
-  },
-  "mycdkvpcPrivateSubnet1RouteTableAssociation7FC64E24": {
-   "Type": "AWS::EC2::SubnetRouteTableAssociation",
-   "Properties": {
-    "RouteTableId": {
-     "Ref": "mycdkvpcPrivateSubnet1RouteTableD4BD6179"
-    },
-    "SubnetId": {
-     "Ref": "mycdkvpcPrivateSubnet1Subnet196BF1EF"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet1/RouteTableAssociation"
-   }
-  },
-  "mycdkvpcPrivateSubnet1DefaultRoute35833E43": {
-   "Type": "AWS::EC2::Route",
-   "Properties": {
-    "DestinationCidrBlock": "0.0.0.0/0",
-    "NatGatewayId": {
-     "Ref": "mycdkvpcPublicSubnet1NATGateway3DF5C4E4"
-    },
-    "RouteTableId": {
-     "Ref": "mycdkvpcPrivateSubnet1RouteTableD4BD6179"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet1/DefaultRoute"
-   }
-  },
-  "mycdkvpcPrivateSubnet2SubnetC5D2ACEF": {
-   "Type": "AWS::EC2::Subnet",
-   "Properties": {
-    "AvailabilityZone": {
-     "Fn::Select": [
-      1,
-      {
-       "Fn::GetAZs": ""
-      }
-     ]
-    },
-    "CidrBlock": "10.0.192.0/18",
-    "MapPublicIpOnLaunch": false,
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "aws-cdk:subnet-name",
-      "Value": "Private"
-     },
-     {
-      "Key": "aws-cdk:subnet-type",
-      "Value": "Private"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet2"
-     }
-    ],
-    "VpcId": {
-     "Ref": "mycdkvpc037DA4AF"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet2/Subnet"
-   }
-  },
-  "mycdkvpcPrivateSubnet2RouteTableE3606704": {
-   "Type": "AWS::EC2::RouteTable",
-   "Properties": {
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet2"
-     }
-    ],
-    "VpcId": {
-     "Ref": "mycdkvpc037DA4AF"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet2/RouteTable"
-   }
-  },
-  "mycdkvpcPrivateSubnet2RouteTableAssociation9998E839": {
-   "Type": "AWS::EC2::SubnetRouteTableAssociation",
-   "Properties": {
-    "RouteTableId": {
-     "Ref": "mycdkvpcPrivateSubnet2RouteTableE3606704"
-    },
-    "SubnetId": {
-     "Ref": "mycdkvpcPrivateSubnet2SubnetC5D2ACEF"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet2/RouteTableAssociation"
-   }
-  },
-  "mycdkvpcPrivateSubnet2DefaultRouteFF924DDA": {
-   "Type": "AWS::EC2::Route",
-   "Properties": {
-    "DestinationCidrBlock": "0.0.0.0/0",
-    "NatGatewayId": {
-     "Ref": "mycdkvpcPublicSubnet2NATGatewayE67C5CFB"
-    },
-    "RouteTableId": {
-     "Ref": "mycdkvpcPrivateSubnet2RouteTableE3606704"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet2/DefaultRoute"
-   }
-  },
-  "mycdkvpcIGW4220D5A9": {
-   "Type": "AWS::EC2::InternetGateway",
-   "Properties": {
-    "Tags": [
-     {
-      "Key": "amplify:deployment-type",
-      "Value": "sandbox"
-     },
-     {
-      "Key": "created-by",
-      "Value": "amplify"
-     },
-     {
-      "Key": "Name",
-      "Value": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc"
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/IGW"
-   }
-  },
-  "mycdkvpcVPCGW2444B783": {
-   "Type": "AWS::EC2::VPCGatewayAttachment",
-   "Properties": {
-    "InternetGatewayId": {
-     "Ref": "mycdkvpcIGW4220D5A9"
-    },
-    "VpcId": {
-     "Ref": "mycdkvpc037DA4AF"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/VPCGW"
-   }
-  },
   "CpuAutoProcessorProcessingQueue8311B335": {
    "Type": "AWS::SQS::Queue",
    "Properties": {
@@ -743,15 +171,6 @@
       "IpProtocol": "-1"
      }
     ],
-    "SecurityGroupIngress": [
-     {
-      "CidrIp": "0.0.0.0/0",
-      "Description": "from 0.0.0.0/0:22",
-      "FromPort": 22,
-      "IpProtocol": "tcp",
-      "ToPort": 22
-     }
-    ],
     "Tags": [
      {
       "Key": "amplify:deployment-type",
@@ -763,7 +182,7 @@
      }
     ],
     "VpcId": {
-     "Ref": "mycdkvpc037DA4AF"
+     "Ref": "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustomNestedStackDetwebCustomNestedStackResourceB98792C6Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustommycdkvpc27983103Ref"
     }
    },
    "Metadata": {
@@ -895,7 +314,7 @@
   "CpuAutoProcessorProcessorASGLaunchConfigA3D14D04": {
    "Type": "AWS::AutoScaling::LaunchConfiguration",
    "Properties": {
-    "AssociatePublicIpAddress": true,
+    "AssociatePublicIpAddress": false,
     "IamInstanceProfile": {
      "Ref": "CpuAutoProcessorProcessorASGInstanceProfileE1B14764"
     },
@@ -964,10 +383,10 @@
     ],
     "VPCZoneIdentifier": [
      {
-      "Ref": "mycdkvpcPublicSubnet1Subnet0CCFA225"
+      "Ref": "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustomNestedStackDetwebCustomNestedStackResourceB98792C6Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustommycdkvpcPublicSubnet1Subnet8B235FA1Ref"
      },
      {
-      "Ref": "mycdkvpcPublicSubnet2Subnet33F973F6"
+      "Ref": "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustomNestedStackDetwebCustomNestedStackResourceB98792C6Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustommycdkvpcPublicSubnet2SubnetFED573A6Ref"
      }
     ]
    },
@@ -1520,15 +939,6 @@
       "IpProtocol": "-1"
      }
     ],
-    "SecurityGroupIngress": [
-     {
-      "CidrIp": "0.0.0.0/0",
-      "Description": "from 0.0.0.0/0:22",
-      "FromPort": 22,
-      "IpProtocol": "tcp",
-      "ToPort": 22
-     }
-    ],
     "Tags": [
      {
       "Key": "amplify:deployment-type",
@@ -1672,7 +1082,7 @@
   "GpuAutoProcessorProcessorASGLaunchConfig5083714B": {
    "Type": "AWS::AutoScaling::LaunchConfiguration",
    "Properties": {
-    "AssociatePublicIpAddress": true,
+    "AssociatePublicIpAddress": false,
     "IamInstanceProfile": {
      "Ref": "GpuAutoProcessorProcessorASGInstanceProfileBD1F1540"
     },
@@ -2246,7 +1656,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/2VTXW+rMAz9Lfc9zbZK+wFcVk2VpomVaa+Ta1zqNSTcxGlVIf77FKCf98nHx8Y+tsNcPz0/68c/cAgzrHYzw2vdvVMQqkoB3Ck4hO+OodHdyhlS+cYOtnCG8ZjcC1raIGCRCu82bKhXhHPdfbWYgl9Froq4NoxlXFuSxF3QykWhT1iPHUb+wmUhOGQQdvacnMBiWSTzDvIKQgc4qsLzHoQuhZdWyFs6J4xKJi8TAdw2ZEWVhNGzHF+9i+2g4ZroVfgXdPcRKQ6NB5DmC7rLTQxCPtH/wxxaQJZj4d2eK/JXkwSVhfo+Pnx6zy1w/glh90Ibtnxawj3jrABb8lfcAucl+T3juNQJlggmLTUVyF200iuI4gKCYVvrLoviytE5L+MNosVt7uyG6+jPh7hPTRvx3xACSdAvDnfklw3U6X4kKaZX1LrA4vzxLwRSxtVBd2/uqpM7lYK2NYxDrxt9F/2+np7RLVMKtZOq6W1eMRmexN+k9AqNi9UBBLe6ywz4Zhgwgb5XKwoueiQ1TFIK1Gzr4fGDh4amm5+z0hGdrYYr9Mq6ivRPeNjPH/VT+td+AvPMRyvckF6N9hd2uBR0iAMAAA=="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/2VS0U7jMBD8Ft5dH0TiA3IBISR06jX3jpbNNix1vDmv3aqK8u/IbgttefJ4POud0W5l7+7v7e0N7HSB3Wbh+M1Of0gjdW0E3BjY6evEMNhpJY5Ms/blXIpj3OfrN3r2GsEjLYOs2dFs9L/a6W+iVOoKmA2h2qlxSSOFTP+EDYyAHPfLIFvuKNSqggyRxauptb9+L6XX3CNW/0A3D7Rmz7k0q64Z8RHYUzjjHrFqKWwZi+cTbBEcvDnKHzSSfMw5Kju1hClw3D8FSeOh4IyYDaQoiuDY93aqU5T2cPnSv0Dy+N6IX3OfApyMXktzu/AKqhTVPghuKDwP0FOdmfxmVzSKcpSw/w1KxkmvdnqRs05y+grG0TGWXhf+vkOGnmJJc8m0kcajq+PUz5gaT+YvJLNBJ6nbQcR3O9UOwlACZjDPZkUqKSCZkqSN0LPvy1pBgIGOi/GlypMW35VRzcZLR/ZDf22rW3uXt/hDmRch+cgD2dXh/ASn81Wo4gIAAA=="
    },
    "Metadata": {
     "aws:cdk:path": "amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/CDKMetadata/Default"
@@ -2263,12 +1673,6 @@
    "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
    "Default": "/aws/service/ecs/optimized-ami/amazon-linux-2/gpu/recommended/image_id"
   },
-  "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPI6B9858ACGraphQLUrl": {
-   "Type": "String"
-  },
-  "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPIDefaultApiKeyE28B0CB9ApiKey": {
-   "Type": "String"
-  },
   "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustomNestedStackDetwebCustomNestedStackResourceB98792C6Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustommycdkvpc27983103Ref": {
    "Type": "String"
   },
@@ -2276,6 +1680,12 @@
    "Type": "String"
   },
   "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustomNestedStackDetwebCustomNestedStackResourceB98792C6Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustommycdkvpcPublicSubnet2SubnetFED573A6Ref": {
+   "Type": "String"
+  },
+  "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPI6B9858ACGraphQLUrl": {
+   "Type": "String"
+  },
+  "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPIDefaultApiKeyE28B0CB9ApiKey": {
    "Type": "String"
   },
   "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66storageNestedStackstorageNestedStackResource3B7FD3E2Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66storageinputsBucketF67DEBA4Ref": {

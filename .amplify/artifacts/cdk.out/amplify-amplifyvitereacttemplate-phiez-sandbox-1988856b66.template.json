@@ -649,7 +649,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/96798a133b035166aa8e7c784654d197a479aa1bb5cdf971c8000e24395d8011.json"
+       "/45abad0fbd2f0ca30d00072cbf7585772e756dc787bf76d1971414807b739111.json"
       ]
      ]
     }
@@ -759,7 +759,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/a2f5c26332fe0110d408add1b6d1a18dc1c8dfb53c04b0955ee7f08e25b0506e.json"
+       "/bf9fb4a0cc53323f41521bdfad67059f3a61024db6273217c072ea839daea746.json"
       ]
      ]
     }
@@ -776,18 +776,6 @@
    "Type": "AWS::CloudFormation::Stack",
    "Properties": {
     "Parameters": {
-     "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPI6B9858ACGraphQLUrl": {
-      "Fn::GetAtt": [
-       "data7552DF31",
-       "Outputs.amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPI6B9858ACGraphQLUrl"
-      ]
-     },
-     "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPIDefaultApiKeyE28B0CB9ApiKey": {
-      "Fn::GetAtt": [
-       "data7552DF31",
-       "Outputs.amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPIDefaultApiKeyE28B0CB9ApiKey"
-      ]
-     },
      "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustomNestedStackDetwebCustomNestedStackResourceB98792C6Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustommycdkvpc27983103Ref": {
       "Fn::GetAtt": [
        "DetwebCustom4B9ACD2D",
@@ -804,6 +792,18 @@
       "Fn::GetAtt": [
        "DetwebCustom4B9ACD2D",
        "Outputs.amplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustommycdkvpcPublicSubnet2SubnetFED573A6Ref"
+      ]
+     },
+     "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPI6B9858ACGraphQLUrl": {
+      "Fn::GetAtt": [
+       "data7552DF31",
+       "Outputs.amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPI6B9858ACGraphQLUrl"
+      ]
+     },
+     "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPIDefaultApiKeyE28B0CB9ApiKey": {
+      "Fn::GetAtt": [
+       "data7552DF31",
+       "Outputs.amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPIDefaultApiKeyE28B0CB9ApiKey"
       ]
      },
      "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66storageNestedStackstorageNestedStackResource3B7FD3E2Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66storageinputsBucketF67DEBA4Ref": {
@@ -839,7 +839,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/de47a3ff15e3edd4c8ee41f0722de64e53e788d8a79f573143b0a56da1f4092a.json"
+       "/c1caf98bc17bfb9d57c4a218fbb5b266192036d668cf8e61e882f192e8b5b787.json"
       ]
      ]
     }

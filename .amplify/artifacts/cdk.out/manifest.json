@@ -22,7 +22,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d5f61d374320706570c5242c487242712a51c2a28c6ded35ae6db4eef9dc89cd.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/bbd44cb1a5ba286fe80aaa97c97554a659d61794d6ee7ab9053b533c3f347295.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -774,7 +774,7 @@
               "BackendFactory (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\@aws-amplify\\backend\\src\\backend_factory.ts:111:40)",
               "defineBackend (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\@aws-amplify\\backend\\src\\backend_factory.ts:155:19)",
               "import_resource (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:19:15)",
-              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:187:1)",
+              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:186:1)",
               "Module._compile (node:internal/modules/cjs/loader:1358:14)",
               "Object.transformer (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\tsx\\dist\\register-C1urN2EO.cjs:2:1122)",
               "Module.load (node:internal/modules/cjs/loader:1208:32)",
@@ -804,7 +804,7 @@
               "BackendFactory (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\@aws-amplify\\backend\\src\\backend_factory.ts:111:40)",
               "defineBackend (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\@aws-amplify\\backend\\src\\backend_factory.ts:155:19)",
               "import_resource (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:19:15)",
-              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:187:1)",
+              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:186:1)",
               "Module._compile (node:internal/modules/cjs/loader:1358:14)",
               "Object.transformer (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\tsx\\dist\\register-C1urN2EO.cjs:2:1122)",
               "Module.load (node:internal/modules/cjs/loader:1208:32)",
@@ -834,7 +834,7 @@
               "BackendFactory (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\@aws-amplify\\backend\\src\\backend_factory.ts:111:40)",
               "defineBackend (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\@aws-amplify\\backend\\src\\backend_factory.ts:155:19)",
               "import_resource (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:19:15)",
-              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:187:1)",
+              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:186:1)",
               "Module._compile (node:internal/modules/cjs/loader:1358:14)",
               "Object.transformer (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\tsx\\dist\\register-C1urN2EO.cjs:2:1122)",
               "Module.load (node:internal/modules/cjs/loader:1208:32)",
@@ -13472,8 +13472,8 @@
               "Annotations.addWarningV2 (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:825)",
               "new AutoScalingGroup (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\aws-cdk-lib\\aws-autoscaling\\lib\\auto-scaling-group.js:1:16415)",
               "EC2QueueProcessor (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\ec2QueueProcessor.ts:67:29)",
-              "import_resource (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:164:19)",
-              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:187:1)",
+              "import_resource (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:163:19)",
+              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:186:1)",
               "Module._compile (node:internal/modules/cjs/loader:1358:14)",
               "Object.transformer (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\tsx\\dist\\register-C1urN2EO.cjs:2:1122)",
               "Module.load (node:internal/modules/cjs/loader:1208:32)",
@@ -13588,144 +13588,6 @@
             "data": "EcsTaskRoleDefaultPolicy50882C77"
           }
         ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpc037DA4AF"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/Subnet": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet1Subnet0CCFA225"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/RouteTable": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet1RouteTableC2716F4D"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/RouteTableAssociation": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet1RouteTableAssociation2B06D461"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/DefaultRoute": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet1DefaultRoute19FD7680"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/EIP": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet1EIPC0CEF1CB"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet1/NATGateway": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet1NATGateway3DF5C4E4"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/Subnet": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet2Subnet33F973F6"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/RouteTable": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet2RouteTableB1A27A7D"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/RouteTableAssociation": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet2RouteTableAssociation3ADB11EB"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/DefaultRoute": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet2DefaultRoute32FE0E26"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/EIP": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet2EIP2135E277"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PublicSubnet2/NATGateway": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPublicSubnet2NATGatewayE67C5CFB"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet1/Subnet": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPrivateSubnet1Subnet196BF1EF"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet1/RouteTable": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPrivateSubnet1RouteTableD4BD6179"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet1/RouteTableAssociation": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPrivateSubnet1RouteTableAssociation7FC64E24"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet1/DefaultRoute": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPrivateSubnet1DefaultRoute35833E43"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet2/Subnet": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPrivateSubnet2SubnetC5D2ACEF"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet2/RouteTable": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPrivateSubnet2RouteTableE3606704"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet2/RouteTableAssociation": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPrivateSubnet2RouteTableAssociation9998E839"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/PrivateSubnet2/DefaultRoute": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcPrivateSubnet2DefaultRouteFF924DDA"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/IGW": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcIGW4220D5A9"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/my-cdk-vpc/VPCGW": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "mycdkvpcVPCGW2444B783"
-          }
-        ],
         "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/CpuAutoProcessor/ProcessingQueue/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -13758,9 +13620,9 @@
               "Annotations.addMessage (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:1608)",
               "Annotations.addWarningV2 (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:825)",
               "new AutoScalingGroup (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\aws-cdk-lib\\aws-autoscaling\\lib\\auto-scaling-group.js:1:16415)",
-              "AutoProcessor (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\autoProcessor.ts:66:16)",
-              "import_resource (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:111:34)",
-              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:187:1)",
+              "AutoProcessor (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\autoProcessor.ts:68:16)",
+              "import_resource (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:110:34)",
+              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:186:1)",
               "Module._compile (node:internal/modules/cjs/loader:1358:14)",
               "Object.transformer (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\tsx\\dist\\register-C1urN2EO.cjs:2:1122)",
               "Module.load (node:internal/modules/cjs/loader:1208:32)",
@@ -13907,9 +13769,9 @@
               "Annotations.addMessage (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:1608)",
               "Annotations.addWarningV2 (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:825)",
               "new AutoScalingGroup (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\aws-cdk-lib\\aws-autoscaling\\lib\\auto-scaling-group.js:1:16415)",
-              "AutoProcessor (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\autoProcessor.ts:66:16)",
-              "import_resource (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:134:32)",
-              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:187:1)",
+              "AutoProcessor (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\autoProcessor.ts:68:16)",
+              "import_resource (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:133:32)",
+              "Object.<anonymous> (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\amplify\\backend.ts:186:1)",
               "Module._compile (node:internal/modules/cjs/loader:1358:14)",
               "Object.transformer (C:\\Users\\phiez\\Documents\\work\\amplify-vite-react-template\\node_modules\\tsx\\dist\\register-C1urN2EO.cjs:2:1122)",
               "Module.load (node:internal/modules/cjs/loader:1208:32)",
@@ -14036,18 +13898,6 @@
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/reference-to-amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputs.amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPI6B9858ACGraphQLUrl": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPI6B9858ACGraphQLUrl"
-          }
-        ],
-        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/reference-to-amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputs.amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPIDefaultApiKeyE28B0CB9ApiKey": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPIDefaultApiKeyE28B0CB9ApiKey"
-          }
-        ],
         "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/reference-to-amplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustomNestedStackDetwebCustomNestedStackResourceB98792C6Outputs.amplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustommycdkvpc27983103Ref": [
           {
             "type": "aws:cdk:logicalId",
@@ -14064,6 +13914,18 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustomNestedStackDetwebCustomNestedStackResourceB98792C6Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66DetwebCustommycdkvpcPublicSubnet2SubnetFED573A6Ref"
+          }
+        ],
+        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/reference-to-amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputs.amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPI6B9858ACGraphQLUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPI6B9858ACGraphQLUrl"
+          }
+        ],
+        "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/reference-to-amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputs.amplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPIDefaultApiKeyE28B0CB9ApiKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataNestedStackdataNestedStackResource363753E9Outputsamplifyamplifyvitereacttemplatephiezsandbox1988856b66dataamplifyDataGraphQLAPIDefaultApiKeyE28B0CB9ApiKey"
           }
         ],
         "/amplify-amplifyvitereacttemplate-phiez-sandbox-1988856b66/DetwebECS/reference-to-amplifyamplifyvitereacttemplatephiezsandbox1988856b66storageNestedStackstorageNestedStackResource3B7FD3E2Outputs.amplifyamplifyvitereacttemplatephiezsandbox1988856b66storageinputsBucketF67DEBA4Ref": [
