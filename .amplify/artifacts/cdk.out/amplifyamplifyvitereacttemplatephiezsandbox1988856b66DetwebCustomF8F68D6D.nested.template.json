@@ -761,7 +761,7 @@
      ]
     },
     "InstanceType": "g4dn.xlarge",
-    "KeyName": "phindulo",
+    "KeyName": "deploy",
     "SecurityGroups": [
      {
       "Fn::GetAtt": [
@@ -988,8 +988,8 @@
  },
  "Mappings": {
   "MyProcessorProcessorASGAmiMap5C50F077": {
-   "eu-west-2": {
-    "ami": "ami-0d8f73689282bd592"
+   "eu-west-1": {
+    "ami": "ami-01692ebb92628b00c"
    }
   }
  },
